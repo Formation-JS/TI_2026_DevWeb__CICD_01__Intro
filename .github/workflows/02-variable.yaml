@@ -1,0 +1,26 @@
+# Mini exo
+# Faire un workflow avec :
+# - 3 jobs qui manipule des valiables
+# - Variable à utiliser : 
+#   Dans le job 1 : 
+#    - Env local : "Une phrase..."
+#    - Env github : "Le nom de la branche"
+#   Dans le job 2 : variable et secret de repo
+#   Dans le job 3 : variable et secret d'environnement
+
+name: Exo 01 - Variable
+
+on:
+  workflow_dispatch:
+
+env:
+  HELLO: "Hello World 🌞"
+
+jobs: 
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher la variable d'env local
+        run: echo "Votre message : $HELLO"
+      - name: Afficher le nom de la branche
+        run: echo "Le nom de la branche est $GITHUB_REF"
