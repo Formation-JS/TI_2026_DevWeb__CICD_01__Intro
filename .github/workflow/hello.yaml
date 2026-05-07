@@ -1,0 +1,14 @@
+# Nom du workflow
+name: Afficher « Bonjour le monde »
+
+# Trigger
+on:
+  workflow_dispatch:
+
+# Travail à réaliser
+jobs:
+  dire_bonjour:
+    runs-on: windows-latest
+    steps:
+      - name: Afficher le message
+        run: echo "Bonjour le monde"
