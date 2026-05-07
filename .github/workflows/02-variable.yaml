@@ -17,7 +17,7 @@ env:
   HELLO: "Hello World 🌞"
 
 jobs: 
-  say_hello:
+  show_env:
     runs-on: ubuntu-latest
     steps:
       - name: Afficher la variable d'env local
@@ -26,8 +26,19 @@ jobs:
       - name: Afficher le nom de la branche
         run: echo "Le nom de la branche est $GITHUB_REF"
 
-  say_repo:
+  show_var_repo:
     runs-on: ubuntu-latest
+    steps:
+      - name: Affiche un message
+        run: | 
+          echo "Un message : ${{ vars.MESSAGE }}"
+      - name: Afficher un secret 
+        run: |
+          echo "Un secret : ${{ secrets.VIP_MESSAGE }}"
+
+  show_var_env:
+    runs-on: ubuntu-latest
+    environment: env_exo
     steps:
       - name: Affiche un message
         run: | 
