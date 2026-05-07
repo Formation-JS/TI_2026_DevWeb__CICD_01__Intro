@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Afficher la variable d'env local
-        run: echo "Votre message : $HELLO"
+        run: |
+          echo "Votre message : $HELLO"
       - name: Afficher le nom de la branche
         run: echo "Le nom de la branche est $GITHUB_REF"
