@@ -1,5 +1,13 @@
 # CICD - Demo 01
 
+## Principe du CI/CD
+- Intégration continue (CI)
+  - Récuperation du code
+  - Validation de la qualité du code
+  - Validation des tests
+- Déployment continue (CD)
+  - Mise en ligne du projet
+
 ## Mise en place
 Créer des dossiers : `.github/workflows`
 Créer un fichier `.yaml`/`.yml` pour créer un pipeline
