@@ -25,3 +25,13 @@ jobs:
           echo "Votre message : $HELLO"
       - name: Afficher le nom de la branche
         run: echo "Le nom de la branche est $GITHUB_REF"
+
+  say_repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Affiche un message
+        run: | 
+          echo "Un message : ${{ vars.MESSAGE }}"
+      - name: Afficher un secret 
+        run: |
+          echo "Un secret : ${{ secrets.VIP_MESSAGE }}"
